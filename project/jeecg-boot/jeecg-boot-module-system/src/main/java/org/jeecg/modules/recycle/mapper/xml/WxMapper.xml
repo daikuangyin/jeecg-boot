@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.recycle.mapper.WxMapper">
+    <!--banner列表-->
+    <select id="listBanner" resultType="com.alibaba.fastjson.JSONObject">
+        select
+            id,key_Word as keyWord,url,content
+        from
+        recycle_banner
+    </select>
+    <!--类目信息-->
+    <select id="listCategory" resultType="com.alibaba.fastjson.JSONObject">
+        select
+            id,name,img,memo
+        from
+            recycle_category
+    </select>
+    <!--类目子项分类价目信息-->
+    <select id="listSubCategory" parameterType="java.lang.Integer" resultType="com.alibaba.fastjson.JSONObject">
+        select
+            id,name,unit_price as unitPrice
+        from
+            recycle_sub_category
+        where category_id = #{categoryId}
+    </select>
+    <!--推广信息列表-->
+    <select id="listPromotionWithPage" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+        select
+            id,name,phone,address from
+        recycle_promotion
+        order by create_time desc
+        limit #{pageIndex}, #{pageSize}
+    </select>
+    <select id="countPromotion" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+        recycle_promotion
+    </select>
+     <!--定期回收数量-->
+    <select id="planRecoveryNum" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+        recycle_record
+        <where>
+            user_id = #{userId}
+        </where>
+    </select>
+    <!--回收数量-->
+    <select id="recoveryNum" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+        recycle_user_order
+        <where>
+            order_status = 2
+            and user_id = #{userId}
+        </where>
+    </select>
+
+    <insert id="inserOrder">
+        insert into recycle_user_order
+    </insert>
+
+    <insert id="insertPlanOrder">
+
+    </insert>
+
+    <select id="listOrderWithPage" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+        select
+        t1.id,
+        order_code as orderCode,
+        t1.`user_id` as userId,
+        (select name from recycle_user where uid = userId) as userName,
+        `recycle_user_id` as recycleUserId,
+        (select name from recycle_user where uid = recycle_user_id) as recycleUserName,
+        `sub_category_id` as subCategoryId,
+        (select name from recycle_sub_category where id = `sub_category_id`) as subCategoryName,
+        t3.unit_price as unitPrice,
+        `take_goods_time` as takeGoodsTime,
+        `estimat_weight` as estimatWeight,
+        `actual_weight` as actualWeight,
+        `voucher`,
+        `price`,
+        `comple_time` as compleTime ,
+        `image`,
+        `memo`,
+        `type`,
+        t1.create_by as createBy,
+        t1.`create_time` as createTime,
+        order_status as orderStatus,
+        t2.service_address as serviceAddress,
+        t2.detailed_address as detailedAddress,
+        t2.linkman,
+        t2.phone
+        from recycle_user_order t1
+        left join recycle_address t2
+        on t1.recycle_address_id = t2.id
+        left join recycle_sub_category t3
+        on t1.sub_category_id = t3.id
+        <where>
+            <if test="isRecycleUser == 1">
+                <if test="userId != null">
+                    and  t1.user_id = #{userId}
+                </if>
+                <if test="orderStatus lt 3 ">
+                    and order_status = #{orderStatus}
+                </if>
+                <if test="type != null ">
+                    and type = #{type}
+                </if>
+            </if>
+            <if test="isRecycleUser == 2">
+                <if test="type != null ">
+                    and type = #{type}
+                </if>
+                <if test="orderStatus == 0 ">
+                        and order_status = 0
+                </if>
+                <if test="orderStatus != 0 ">
+                    <if test="orderStatus lt 3 ">
+                        and order_status = #{orderStatus}
+                    </if>
+                    <if test="userId != null">
+                        and  recycle_user_id = #{userId}
+                    </if>
+                </if>
+            </if>
+        </where>
+        limit #{pageIndex}, #{pageSize}
+    </select>
+    <select id="countOrder" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.Integer">
+        SELECT
+        count(*)
+        FROM
+        recycle_user_order
+        <where>
+            <if test="isRecycleUser == 1">
+                <if test="userId != null">
+                    and  t1.user_id = #{userId}
+                </if>
+                <if test="orderStatus lt 3 ">
+                    and order_status = #{orderStatus}
+                </if>
+                <if test="type != null ">
+                    and type = #{type}
+                </if>
+            </if>
+            <if test="isRecycleUser == 2">
+                <if test="type != null ">
+                    and type = #{type}
+                </if>
+                <if test="orderStatus == 0 ">
+                    and order_status = 0
+                </if>
+                <if test="orderStatus != 0 ">
+                    <if test="orderStatus lt 3 ">
+                        and order_status = #{orderStatus}
+                    </if>
+                    <if test="userId != null">
+                        and  recycle_user_id = #{userId}
+                    </if>
+                </if>
+            </if>
+        </where>
+    </select>
+
+    <select id="listCashWithPage" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+        select
+            id,cash_way AS cashWay ,serial_num AS serialNum,audit_status as auditStatus,cash_money as cashMoney,
+            create_time as createTime
+        from
+        recycle_user_cash t
+        <where>
+            user_id = #{userId}
+        </where>
+        order by create_time desc
+        limit #{pageIndex}, #{pageSize}
+    </select>
+    <select id="countCash" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+        recycle_user_cash
+        <where>
+            user_id = #{userId}
+        </where>
+    </select>
+
+
+    <select id="getWeightByUserId" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.Integer">
+        select
+        sum(actual_weight)
+        from
+        recycle_user_order
+        where comple_time &gt; #{startTime}
+        and user_id = #{userId}
+    </select>
+
+    <select id="listAddressWithPage" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+        select
+            id,service_address as serviceAddress,detailed_address as detailedAddress,linkman,
+            phone,is_default as isDefault
+             from
+        recycle_address
+        where user_id = #{userId}
+        order by create_time desc
+          limit #{pageIndex}, #{pageSize}
+    </select>
+    <select id="addressCount" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+        recycle_address
+        where user_id = #{userId}
+    </select>
+    <!--用户余额-->
+    <select id="userBalance" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.Double">
+        SELECT
+        sum(money_out_amount) AS balance
+        FROM
+        recycle_user_wallet
+        <where>
+            wallet_status = 1
+            and
+            user_id = #{userId}
+        </where>
+    </select>
+
+    <!--用户总提现金额-->
+    <select id="totalCash" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.String">
+        SELECT
+            sum(cash_money)
+        FROM
+        recycle_user_cash
+        <where>
+            audit_status = 1
+            and
+            user_id = #{userId}
+        </where>
+    </select>
+</mapper>

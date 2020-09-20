@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.recycle.mapper.RecycleRecordMapper">
+    <select id="listByUserId" parameterType="map" resultType="org.jeecg.modules.recycle.entity.RecycleRecord">
+        select * from recycle_record
+        <where>
+            user_id = #{userId}
+            <if test="orderId != null and orderId != ''">
+               and order_id = #{orderId}
+            </if>
+        </where>
+        order by create_time desc
+        limit #{pageIndex}, #{pageSize}
+
+    </select>
+
+    <select id="count" parameterType="map" resultType="java.lang.Integer">
+        select count(1) from recycle_record
+        <where>
+            user_id = #{userId}
+            <if test="orderId != null and orderId != ''">
+                and order_id = #{orderId}
+            </if>
+        </where>
+    </select>
+</mapper>

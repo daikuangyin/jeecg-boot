@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.recycle.mapper.RecycleUserOrderMapper">
+
+    <select id="listWithPage" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+        select
+        order_code as orderCode,
+        t1.`user_id` as userId,
+        `recycle_user_id` as recycleUserId,
+        `sub_category_id` as subCategoryId,
+        `take_goods_time` as takeGoodsTime,
+        `estimat_weight` as estimatWeight,
+        `actual_weight` as actualWeight,
+        `voucher`,
+        `price`,
+        `comple_time` as compleTime ,
+        `image`,
+        `memo`,
+        `type`,
+        t1.create_by as createBy,
+        t1.`create_time` as createTime,
+        order_status as orderStatus,
+        t2.service_address as serviceAddress,
+        t2.linkman,
+        t2.phone
+        from recycle_user_order t1
+        left join recycle_address t2
+        on t1.recycle_address_id = t2.id
+            <where>
+                <if test="userId != null">
+                    and t1.user_id = #{userId}
+                </if>
+            </where>
+            limit #{pageIndex}, #{pageSize}
+    </select>
+
+    <select id="count" parameterType="java.lang.Integer" resultType="com.alibaba.fastjson.JSONObject">
+            select count(*) from recycle_user_order
+            <where>
+                <if test="userId != null">
+                    and user_id = #{userId}
+                </if>
+            </where>
+    </select>
+
+
+
+    <select id="getRecycleUserById" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+        select
+            order_code as orderCode,
+            t1.`user_id` as userId,
+            `recycle_user_id` as recycleUserId,
+            `sub_category_id` as subCategoryId,
+            (select name from recycle_sub_category where id = `sub_category_id`) as subCategoryName,
+            t3.unit_price as unitPrice,
+            `take_goods_time` as takeGoodsTime,
+            `estimat_weight` as estimatWeight,
+            `actual_weight` as actualWeight,
+            `voucher`,
+            `price`,
+            `comple_time` as compleTime ,
+            `image`,
+            `memo`,
+            `type`,
+            t1.create_by as createBy,
+            t1.`create_time` as createTime,
+            order_status as orderStatus,
+            t2.service_address as serviceAddress,
+            t2.detailed_address as detailedAddress,
+            t2.linkman,
+            t2.phone
+        from recycle_user_order t1
+        left join recycle_address t2
+        on t1.recycle_address_id = t2.id
+        left join recycle_sub_category t3
+        on t1.sub_category_id = t3.id
+        <where>
+            <if test="id != null">
+                and t1.id = #{id}
+            </if>
+        </where>
+    </select>
+
+
+    <update id="pay">
+         update recycle_user_order set order_status = 2 where id = #{id}
+    </update>
+
+    <update id="receiveOrder">
+        update recycle_user_order set order_status = 1 where id = #{id}
+    </update>
+
+    <update id="cancelOrder">
+        update recycle_user_order set order_status = 3 where id = #{id}
+    </update>
+</mapper>

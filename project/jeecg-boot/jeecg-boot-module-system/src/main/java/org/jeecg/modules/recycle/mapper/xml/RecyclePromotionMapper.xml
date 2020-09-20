@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.demo.recycle.mapper.RecyclePromotionMapper">
+
+    <select id="listWithPage" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+        select
+            id,name,phone,address from
+        recycle_promotion
+        order by create_time desc
+    </select>
+
+    <select id="count" parameterType="com.alibaba.fastjson.JSONObject" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+        recycle_promotion
+    </select>
+</mapper>

@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Fri Aug 21 12:29:53 CST 2020</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:53,858</td>
+<td class="Message">Starting JeecgApplication on xuxuan with PID 14948 (D:\code\yindu\project\jeecg-boot\jeecg-boot-module-system\target\classes started by lenovo in D:\code\yindu\project\jeecg-boot)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:53,862</td>
+<td class="Message">The following profiles are active: prod</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:55,656</td>
+<td class="Message">Multiple Spring Data modules found, entering strict repository configuration mode!</td>
+<td class="MethodOfCaller">multipleStoresDetected</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">244</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:55,659</td>
+<td class="Message">Bootstrapping Spring Data repositories in DEFAULT mode.</td>
+<td class="MethodOfCaller">registerRepositoriesIn</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">126</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:55,746</td>
+<td class="Message">Finished Spring Data repository scanning in 71ms. Found 0 repository interfaces.</td>
+<td class="MethodOfCaller">registerRepositoriesIn</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">182</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,094</td>
+<td class="Message">Bean &#39;shiroConfig&#39; of type [org.jeecg.config.ShiroConfig$$EnhancerBySpringCGLIB$$9cb3754] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,260</td>
+<td class="Message">Bean &#39;shiroRealm&#39; of type [org.jeecg.modules.shiro.authc.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,715</td>
+<td class="Message">===============(1)创建缓存管理器RedisCacheManager</td>
+<td class="MethodOfCaller">redisCacheManager</td>
+<td class="FileOfCaller">ShiroConfig.java</td>
+<td class="LineOfCaller">214</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,717</td>
+<td class="Message">===============(2)创建RedisManager,连接Redis..URL= 149.129.175.236:6379</td>
+<td class="MethodOfCaller">redisManager</td>
+<td class="FileOfCaller">ShiroConfig.java</td>
+<td class="LineOfCaller">232</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,721</td>
+<td class="Message">Bean &#39;redisManager&#39; of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,725</td>
+<td class="Message">Bean &#39;securityManager&#39; of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,751</td>
+<td class="Message">Bean &#39;authorizationAttributeSourceAdvisor&#39; of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,814</td>
+<td class="Message">Bean &#39;org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration&#39; of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e9c5cdbe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,972</td>
+<td class="Message">Bean &#39;spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties&#39; of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,979</td>
+<td class="Message">Bean &#39;com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration&#39; of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$53543e8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,992</td>
+<td class="Message">Bean &#39;dsProcessor&#39; of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:56,999</td>
+<td class="Message">Bean &#39;dynamicDatasourceAnnotationAdvisor&#39; of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,024</td>
+<td class="Message">Bean &#39;spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties&#39; of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,035</td>
+<td class="Message">Bean &#39;org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration&#39; of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$fedf8c08] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,154</td>
+<td class="Message">Bean &#39;lettuceClientResources&#39; of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,240</td>
+<td class="Message">Bean &#39;redisConnectionFactory&#39; of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,256</td>
+<td class="Message">Bean &#39;redisConfig&#39; of type [org.jeecg.config.RedisConfig$$EnhancerBySpringCGLIB$$5499be9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,290</td>
+<td class="Message">Bean &#39;org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration&#39; of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$fcdeab6e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,297</td>
+<td class="Message">Bean &#39;eventBus&#39; of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,754</td>
+<td class="Message">Tomcat initialized with port(s): 8080 (http)</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">TomcatWebServer.java</td>
+<td class="LineOfCaller">90</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,769</td>
+<td class="Message">Initializing ProtocolHandler [&quot;http-nio-8080&quot;]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,778</td>
+<td class="Message">Starting service [Tomcat]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,778</td>
+<td class="Message">Starting Servlet engine: [Apache Tomcat/9.0.16]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,784</td>
+<td class="Message">The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_172\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\jbr\\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\jbr\\bin\server;D:\app\lenovo\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\NetSarang;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\apache-maven-3.5.3\bin\;D:\Program Files\Java\jdk1.8.0_172\bin\;D:\software\Git\cmd;D:\Program Files\nodejs\;&quot;D:\software\mysql-5.7.25-winx64\mysql-5.7.25-winx64\bin;&quot;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Microsoft VS Code\bin;C:\Users\lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\lenovo\AppData\Roaming\npm;D:\software\Fiddler;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\lenovo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PhpStorm 2019.3.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin;;D:\app\lenovo\product\11.2.0;;.]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,936</td>
+<td class="Message">Initializing Spring embedded WebApplicationContext</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:57,937</td>
+<td class="Message">Root WebApplicationContext: initialization completed in 3986 ms</td>
+<td class="MethodOfCaller">prepareWebApplicationContext</td>
+<td class="FileOfCaller">ServletWebServerApplicationContext.java</td>
+<td class="LineOfCaller">296</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:29:58,334</td>
+<td class="Message">动态数据源-检测到druid存在,如配置中未指定type,druid会默认配置</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">DynamicDataSourceCreator.java</td>
+<td class="LineOfCaller">113</td>
+</tr>
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2020-08-21 12:30:25,379</td>
+<td class="Message">init datasource error, url: jdbc:mysql://rm-a2d645ri52sy67699so.mysql.ap-south-1.rds.aliyuncs.com:3306/smart?characterEncoding=UTF-8&amp;useUnicode=true&amp;useSSL=false</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">936</td>
+</tr>
+<tr><td class="Exception" colspan="6">com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1,009 milliseconds ago.  The last packet sent successfully to the server was 1,008 milliseconds ago.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3562)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3462)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3905)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.ConnectionImpl.pingInternal(ConnectionImpl.java:3935)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Method.java:498)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.alibaba.druid.pool.vendor.MySqlValidConnectionChecker.isValidConnection(MySqlValidConnectionChecker.java:107)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.alibaba.druid.pool.DruidAbstractDataSource.validateConnection(DruidAbstractDataSource.java:1384)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1672)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:932)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.baomidou.dynamic.datasource.DynamicDataSourceCreator.createDruidDataSource(DynamicDataSourceCreator.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.baomidou.dynamic.datasource.DynamicDataSourceCreator.createDataSource(DynamicDataSourceCreator.java:139)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.baomidou.dynamic.datasource.provider.YmlDynamicDataSourceProvider.loadDataSources(YmlDynamicDataSourceProvider.java:59)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.afterPropertiesSet(DynamicRoutingDataSource.java:202)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1463)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1427)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1346)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1205)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1325)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1171)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:602)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1226)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorRegistryBeans.get(HealthIndicatorRegistryBeans.java:42)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorAutoConfiguration.healthIndicatorRegistry(HealthIndicatorAutoConfiguration.java:78)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorAutoConfiguration$$EnhancerBySpringCGLIB$$f347e97e.CGLIB$healthIndicatorRegistry$1(&lt;generated&gt;)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorAutoConfiguration$$EnhancerBySpringCGLIB$$f347e97e$$FastClassBySpringCGLIB$$9b9901f0.invoke(&lt;generated&gt;)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorAutoConfiguration$$EnhancerBySpringCGLIB$$f347e97e.healthIndicatorRegistry(&lt;generated&gt;)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Method.java:498)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.createEndpointBean(EndpointDiscoverer.java:149)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.createEndpointBeans(EndpointDiscoverer.java:136)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.discoverEndpoints(EndpointDiscoverer.java:125)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.getEndpoints(EndpointDiscoverer.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.servletEndpointRegistrar(ServletEndpointManagementContextConfiguration.java:76)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration$$EnhancerBySpringCGLIB$$9ffa2599.CGLIB$servletEndpointRegistrar$0(&lt;generated&gt;)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration$$EnhancerBySpringCGLIB$$9ffa2599$$FastClassBySpringCGLIB$$e26dc8ae.invoke(&lt;generated&gt;)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration$$EnhancerBySpringCGLIB$$9ffa2599.servletEndpointRegistrar(&lt;generated&gt;)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Method.java:498)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:235)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:226)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:101)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.ServletContextInitializerBeans.&lt;init&gt;(ServletContextInitializerBeans.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:261)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:54)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5125)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1377)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1367)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:902)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:831)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1377)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1367)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:902)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardService.startInternal(StandardService.java:423)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:928)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.startup.Tomcat.start(Tomcat.java:455)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:106)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.&lt;init&gt;(TomcatWebServer.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:415)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:174)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:154)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.jeecg.JeecgApplication.main(JeecgApplication.java:28)
+<br />Caused by: java.net.SocketTimeoutException: Read timed out
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.net.SocketInputStream.socketRead0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.net.SocketInputStream.read(SocketInputStream.java:171)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.net.SocketInputStream.read(SocketInputStream.java:141)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:101)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:144)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:174)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3472)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 159 common frames omitted
+</td></tr>
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:25,414</td>
+<td class="Message">{dataSource-1,master} inited</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">1003</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:25,416</td>
+<td class="Message">初始共加载 1 个数据源</td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">203</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:25,418</td>
+<td class="Message">动态数据源-加载 master 成功</td>
+<td class="MethodOfCaller">addDataSource</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:25,420</td>
+<td class="Message">当前的默认数据源是单数据源，数据源名为 master</td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">212</td>
+</tr>
+
+<tr class="warn odd">
+<td class="Level">WARN</td>
+<td class="Date">2020-08-21 12:30:26,554</td>
+<td class="Message">Warn: Could not find @TableId in Class: org.jeecg.modules.loans.entity.LoansTaskLog.</td>
+<td class="MethodOfCaller">initTableFields</td>
+<td class="FileOfCaller">TableInfoHelper.java</td>
+<td class="LineOfCaller">282</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-08-21 12:30:26,576</td>
+<td class="Message">Warn: Could not find @TableId in Class: org.jeecg.modules.loans.entity.LoansUser.</td>
+<td class="MethodOfCaller">initTableFields</td>
+<td class="FileOfCaller">TableInfoHelper.java</td>
+<td class="LineOfCaller">282</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:29,369</td>
+<td class="Message">Using default implementation for ThreadExecutor</td>
+<td class="MethodOfCaller">instantiate</td>
+<td class="FileOfCaller">StdSchedulerFactory.java</td>
+<td class="LineOfCaller">1208</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:29,380</td>
+<td class="Message">Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">SchedulerSignalerImpl.java</td>
+<td class="LineOfCaller">61</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:29,381</td>
+<td class="Message">Quartz Scheduler v.2.3.0 created.</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">QuartzScheduler.java</td>
+<td class="LineOfCaller">229</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:29,384</td>
+<td class="Message">Using db table-based data access locking (synchronization).</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">JobStoreSupport.java</td>
+<td class="LineOfCaller">672</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:29,386</td>
+<td class="Message">JobStoreCMT initialized.</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">JobStoreCMT.java</td>
+<td class="LineOfCaller">145</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:29,387</td>
+<td class="Message">Scheduler meta-data: Quartz Scheduler (v2.3.0) &#39;quartzScheduler&#39; with instanceId &#39;NON_CLUSTERED&#39;
+  Scheduler class: &#39;org.quartz.core.QuartzScheduler&#39; - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool &#39;org.quartz.simpl.SimpleThreadPool&#39; - with 10 threads.
+  Using job-store &#39;org.springframework.scheduling.quartz.LocalDataSourceJobStore&#39; - which supports persistence. and is not clustered.
+</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">QuartzScheduler.java</td>
+<td class="LineOfCaller">294</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:29,388</td>
+<td class="Message">Quartz scheduler &#39;quartzScheduler&#39; initialized from an externally provided properties instance.</td>
+<td class="MethodOfCaller">instantiate</td>
+<td class="FileOfCaller">StdSchedulerFactory.java</td>
+<td class="LineOfCaller">1362</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:29,388</td>
+<td class="Message">Quartz scheduler version: 2.3.0</td>
+<td class="MethodOfCaller">instantiate</td>
+<td class="FileOfCaller">StdSchedulerFactory.java</td>
+<td class="LineOfCaller">1366</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:29,388</td>
+<td class="Message">JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4682882a</td>
+<td class="MethodOfCaller">setJobFactory</td>
+<td class="FileOfCaller">QuartzScheduler.java</td>
+<td class="LineOfCaller">2287</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-08-21 12:30:33,715</td>
+<td class="Message">ElasticSearch 服务连接失败，原因：配置未通过。可能是BaseURL未配置或配置有误，也可能是Elasticsearch服务未启动。接下来将会拒绝执行任何方法！</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">JeecgElasticsearchTemplate.java</td>
+<td class="LineOfCaller">61</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:35,162</td>
+<td class="Message">Exposing 2 endpoint(s) beneath base path &#39;/actuator&#39;</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">EndpointLinksResolver.java</td>
+<td class="LineOfCaller">59</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:35,376</td>
+<td class="Message">Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity&lt;springfox.documentation.spring.web.json.Json&gt; springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]</td>
+<td class="MethodOfCaller">initHandlerMethods</td>
+<td class="FileOfCaller">PropertySourcedRequestMappingHandlerMapping.java</td>
+<td class="LineOfCaller">69</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-08-21 12:30:35,710</td>
+<td class="Message">Initializing ExecutorService &#39;applicationTaskExecutor&#39;</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">ExecutorConfigurationSupport.java</td>
+<td class="LineOfCaller">171</td>
+</tr>

@@ -1,0 +1,1801 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Sep 17 20:48:32 CST 2020</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:48:33,842</td>
+<td class="Message">Starting JeecgApplication on DESKTOP-KLOVOBK with PID 1320 (F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes started by dky in F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:48:33,848</td>
+<td class="Message">The following profiles are active: prod</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-09-17 20:48:38,146</td>
+<td class="Message">Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist</td>
+<td class="MethodOfCaller">__refresh</td>
+<td class="FileOfCaller">AbstractApplicationContext.java</td>
+<td class="LineOfCaller">557</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:48:38,164</td>
+<td class="Message">
+
+Error starting ApplicationContext. To display the conditions report re-run your application with &#39;debug&#39; enabled.</td>
+<td class="MethodOfCaller">logMessage</td>
+<td class="FileOfCaller">ConditionEvaluationReportLoggingListener.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2020-09-17 20:48:38,209</td>
+<td class="Message">Application run failed</td>
+<td class="MethodOfCaller">reportFailure</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">858</td>
+</tr>
+<tr><td class="Exception" colspan="6">org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.access$900(ConfigurationClassParser.java:108)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.ArrayList.forEach(ArrayList.java:1249)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:804)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:774)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:531)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.jeecg.JeecgApplication.main(JeecgApplication.java:28)
+<br />Caused by: java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReader.&lt;init&gt;(SimpleMetadataReader.java:51)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:685)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getSuperClass(ConfigurationClassParser.java:998)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:361)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:263)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:589)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 21 common frames omitted
+</td></tr><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Sep 17 20:49:24 CST 2020</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:49:25,218</td>
+<td class="Message">Starting JeecgApplication on DESKTOP-KLOVOBK with PID 1888 (F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes started by dky in F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:49:25,227</td>
+<td class="Message">The following profiles are active: prod</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-09-17 20:49:27,171</td>
+<td class="Message">Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist</td>
+<td class="MethodOfCaller">__refresh</td>
+<td class="FileOfCaller">AbstractApplicationContext.java</td>
+<td class="LineOfCaller">557</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:49:27,184</td>
+<td class="Message">
+
+Error starting ApplicationContext. To display the conditions report re-run your application with &#39;debug&#39; enabled.</td>
+<td class="MethodOfCaller">logMessage</td>
+<td class="FileOfCaller">ConditionEvaluationReportLoggingListener.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2020-09-17 20:49:27,201</td>
+<td class="Message">Application run failed</td>
+<td class="MethodOfCaller">reportFailure</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">858</td>
+</tr>
+<tr><td class="Exception" colspan="6">org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.access$900(ConfigurationClassParser.java:108)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.ArrayList.forEach(ArrayList.java:1249)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:804)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:774)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:531)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.jeecg.JeecgApplication.main(JeecgApplication.java:28)
+<br />Caused by: java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReader.&lt;init&gt;(SimpleMetadataReader.java:51)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:685)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getSuperClass(ConfigurationClassParser.java:998)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:361)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:263)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:589)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 21 common frames omitted
+</td></tr><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Sep 17 20:50:58 CST 2020</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:50:58,430</td>
+<td class="Message">Starting JeecgApplication on DESKTOP-KLOVOBK with PID 4188 (F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes started by dky in F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:50:58,437</td>
+<td class="Message">The following profiles are active: prod</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-09-17 20:51:00,448</td>
+<td class="Message">Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist</td>
+<td class="MethodOfCaller">__refresh</td>
+<td class="FileOfCaller">AbstractApplicationContext.java</td>
+<td class="LineOfCaller">557</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:51:00,460</td>
+<td class="Message">
+
+Error starting ApplicationContext. To display the conditions report re-run your application with &#39;debug&#39; enabled.</td>
+<td class="MethodOfCaller">logMessage</td>
+<td class="FileOfCaller">ConditionEvaluationReportLoggingListener.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2020-09-17 20:51:00,477</td>
+<td class="Message">Application run failed</td>
+<td class="MethodOfCaller">reportFailure</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">858</td>
+</tr>
+<tr><td class="Exception" colspan="6">org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.access$900(ConfigurationClassParser.java:108)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.ArrayList.forEach(ArrayList.java:1249)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:804)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:774)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:531)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.jeecg.JeecgApplication.main(JeecgApplication.java:28)
+<br />Caused by: java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReader.&lt;init&gt;(SimpleMetadataReader.java:51)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:685)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getSuperClass(ConfigurationClassParser.java:998)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:361)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:263)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:589)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 21 common frames omitted
+</td></tr><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Sep 17 20:51:35 CST 2020</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:51:35,674</td>
+<td class="Message">Starting JeecgApplication on DESKTOP-KLOVOBK with PID 13756 (F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes started by dky in F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:51:35,679</td>
+<td class="Message">The following profiles are active: prod</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-09-17 20:51:37,734</td>
+<td class="Message">Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist</td>
+<td class="MethodOfCaller">__refresh</td>
+<td class="FileOfCaller">AbstractApplicationContext.java</td>
+<td class="LineOfCaller">557</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:51:37,757</td>
+<td class="Message">
+
+Error starting ApplicationContext. To display the conditions report re-run your application with &#39;debug&#39; enabled.</td>
+<td class="MethodOfCaller">logMessage</td>
+<td class="FileOfCaller">ConditionEvaluationReportLoggingListener.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2020-09-17 20:51:37,781</td>
+<td class="Message">Application run failed</td>
+<td class="MethodOfCaller">reportFailure</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">858</td>
+</tr>
+<tr><td class="Exception" colspan="6">org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.access$900(ConfigurationClassParser.java:108)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.ArrayList.forEach(ArrayList.java:1249)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:804)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:774)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:531)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.jeecg.JeecgApplication.main(JeecgApplication.java:28)
+<br />Caused by: java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReader.&lt;init&gt;(SimpleMetadataReader.java:51)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:685)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getSuperClass(ConfigurationClassParser.java:998)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:361)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:263)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:589)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 21 common frames omitted
+</td></tr><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Sep 17 20:51:50 CST 2020</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:51:50,842</td>
+<td class="Message">Starting JeecgApplication on DESKTOP-KLOVOBK with PID 10128 (F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes started by dky in F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:51:50,847</td>
+<td class="Message">The following profiles are active: prod</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-09-17 20:51:52,792</td>
+<td class="Message">Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist</td>
+<td class="MethodOfCaller">__refresh</td>
+<td class="FileOfCaller">AbstractApplicationContext.java</td>
+<td class="LineOfCaller">557</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:51:52,806</td>
+<td class="Message">
+
+Error starting ApplicationContext. To display the conditions report re-run your application with &#39;debug&#39; enabled.</td>
+<td class="MethodOfCaller">logMessage</td>
+<td class="FileOfCaller">ConditionEvaluationReportLoggingListener.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2020-09-17 20:51:52,824</td>
+<td class="Message">Application run failed</td>
+<td class="MethodOfCaller">reportFailure</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">858</td>
+</tr>
+<tr><td class="Exception" colspan="6">org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.access$900(ConfigurationClassParser.java:108)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.ArrayList.forEach(ArrayList.java:1249)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:804)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:774)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:531)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.jeecg.JeecgApplication.main(JeecgApplication.java:28)
+<br />Caused by: java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReader.&lt;init&gt;(SimpleMetadataReader.java:51)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:685)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getSuperClass(ConfigurationClassParser.java:998)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:361)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:263)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:589)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 21 common frames omitted
+</td></tr><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Sep 17 20:53:04 CST 2020</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:53:04,303</td>
+<td class="Message">Starting JeecgApplication on DESKTOP-KLOVOBK with PID 12416 (F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes started by dky in F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:53:04,308</td>
+<td class="Message">The following profiles are active: prod</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-09-17 20:53:06,085</td>
+<td class="Message">Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist</td>
+<td class="MethodOfCaller">__refresh</td>
+<td class="FileOfCaller">AbstractApplicationContext.java</td>
+<td class="LineOfCaller">557</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 20:53:06,100</td>
+<td class="Message">
+
+Error starting ApplicationContext. To display the conditions report re-run your application with &#39;debug&#39; enabled.</td>
+<td class="MethodOfCaller">logMessage</td>
+<td class="FileOfCaller">ConditionEvaluationReportLoggingListener.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2020-09-17 20:53:06,116</td>
+<td class="Message">Application run failed</td>
+<td class="MethodOfCaller">reportFailure</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">858</td>
+</tr>
+<tr><td class="Exception" colspan="6">org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.jeecg.JeecgApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.access$900(ConfigurationClassParser.java:108)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.util.ArrayList.forEach(ArrayList.java:1249)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:804)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:774)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:531)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.jeecg.JeecgApplication.main(JeecgApplication.java:28)
+<br />Caused by: java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReader.&lt;init&gt;(SimpleMetadataReader.java:51)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:685)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getSuperClass(ConfigurationClassParser.java:998)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:361)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:263)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:589)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 21 common frames omitted
+</td></tr><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Sep 17 21:18:23 CST 2020</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:23,614</td>
+<td class="Message">Starting JeecgApplication on DESKTOP-KLOVOBK with PID 13600 (F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes started by dky in F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:23,621</td>
+<td class="Message">The following profiles are active: prod</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:29,419</td>
+<td class="Message">Multiple Spring Data modules found, entering strict repository configuration mode!</td>
+<td class="MethodOfCaller">multipleStoresDetected</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">244</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:29,424</td>
+<td class="Message">Bootstrapping Spring Data repositories in DEFAULT mode.</td>
+<td class="MethodOfCaller">registerRepositoriesIn</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">126</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:30,461</td>
+<td class="Message">Finished Spring Data repository scanning in 1014ms. Found 0 repository interfaces.</td>
+<td class="MethodOfCaller">registerRepositoriesIn</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">182</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:31,405</td>
+<td class="Message">Bean &#39;shiroConfig&#39; of type [org.jeecg.config.ShiroConfig$$EnhancerBySpringCGLIB$$6ee20c47] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:31,596</td>
+<td class="Message">Bean &#39;shiroRealm&#39; of type [org.jeecg.modules.shiro.authc.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:31,625</td>
+<td class="Message">===============(1)创建缓存管理器RedisCacheManager</td>
+<td class="MethodOfCaller">redisCacheManager</td>
+<td class="FileOfCaller">ShiroConfig.java</td>
+<td class="LineOfCaller">215</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:31,629</td>
+<td class="Message">===============(2)创建RedisManager,连接Redis..URL= 106.14.96.252:6379</td>
+<td class="MethodOfCaller">redisManager</td>
+<td class="FileOfCaller">ShiroConfig.java</td>
+<td class="LineOfCaller">233</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:31,636</td>
+<td class="Message">Bean &#39;redisManager&#39; of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:31,644</td>
+<td class="Message">Bean &#39;securityManager&#39; of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:31,695</td>
+<td class="Message">Bean &#39;authorizationAttributeSourceAdvisor&#39; of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:31,851</td>
+<td class="Message">Bean &#39;org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration&#39; of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4edca2b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,174</td>
+<td class="Message">Bean &#39;spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties&#39; of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,183</td>
+<td class="Message">Bean &#39;com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration&#39; of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$b86b1382] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,202</td>
+<td class="Message">Bean &#39;dsProcessor&#39; of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,214</td>
+<td class="Message">Bean &#39;dynamicDatasourceAnnotationAdvisor&#39; of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,246</td>
+<td class="Message">Bean &#39;spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties&#39; of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,259</td>
+<td class="Message">Bean &#39;org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration&#39; of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$63f660fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,502</td>
+<td class="Message">Bean &#39;lettuceClientResources&#39; of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,617</td>
+<td class="Message">Bean &#39;redisConnectionFactory&#39; of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,646</td>
+<td class="Message">Bean &#39;redisConfig&#39; of type [org.jeecg.config.RedisConfig$$EnhancerBySpringCGLIB$$b9b09391] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,718</td>
+<td class="Message">Bean &#39;org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration&#39; of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$61f58061] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:32,729</td>
+<td class="Message">Bean &#39;eventBus&#39; of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:33,453</td>
+<td class="Message">Tomcat initialized with port(s): 8080 (http)</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">TomcatWebServer.java</td>
+<td class="LineOfCaller">90</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:33,477</td>
+<td class="Message">Initializing ProtocolHandler [&quot;http-nio-8080&quot;]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:33,487</td>
+<td class="Message">Starting service [Tomcat]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:33,487</td>
+<td class="Message">Starting Servlet engine: [Apache Tomcat/9.0.16]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:33,496</td>
+<td class="Message">The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [E:\soft\java\jdk-8u144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;E:\soft\java\jdk-8u144\bin;E:\TortoiseProc\bin;E:\nodejs;E:\nodejs\node_global;C:\Program Files\Git\cmd;C:\Users\dky\AppData\Local\Microsoft\WindowsApps;;.]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:33,774</td>
+<td class="Message">Initializing Spring embedded WebApplicationContext</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:33,774</td>
+<td class="Message">Root WebApplicationContext: initialization completed in 10025 ms</td>
+<td class="MethodOfCaller">prepareWebApplicationContext</td>
+<td class="FileOfCaller">ServletWebServerApplicationContext.java</td>
+<td class="LineOfCaller">296</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:34,779</td>
+<td class="Message">动态数据源-检测到druid存在,如配置中未指定type,druid会默认配置</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">DynamicDataSourceCreator.java</td>
+<td class="LineOfCaller">113</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:40,251</td>
+<td class="Message">{dataSource-1,master} inited</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">1003</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:40,252</td>
+<td class="Message">初始共加载 1 个数据源</td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">203</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:40,252</td>
+<td class="Message">动态数据源-加载 master 成功</td>
+<td class="MethodOfCaller">addDataSource</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:40,253</td>
+<td class="Message">当前的默认数据源是单数据源，数据源名为 master</td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">212</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:41,947</td>
+<td class="Message">HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]</td>
+<td class="MethodOfCaller">logPersistenceUnitInformation</td>
+<td class="FileOfCaller">LogHelper.java</td>
+<td class="LineOfCaller">31</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:42,210</td>
+<td class="Message">HHH000412: Hibernate Core {5.3.7.Final}</td>
+<td class="MethodOfCaller">logVersion</td>
+<td class="FileOfCaller">Version.java</td>
+<td class="LineOfCaller">46</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:42,213</td>
+<td class="Message">HHH000206: hibernate.properties not found</td>
+<td class="MethodOfCaller">&lt;clinit&gt;</td>
+<td class="FileOfCaller">Environment.java</td>
+<td class="LineOfCaller">213</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:42,894</td>
+<td class="Message">HCANN000001: Hibernate Commons Annotations {5.0.4.Final}</td>
+<td class="MethodOfCaller">&lt;clinit&gt;</td>
+<td class="FileOfCaller">JavaReflectionManager.java</td>
+<td class="LineOfCaller">49</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:43,759</td>
+<td class="Message">HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">Dialect.java</td>
+<td class="LineOfCaller">157</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:44,574</td>
+<td class="Message">Initialized JPA EntityManagerFactory for persistence unit &#39;default&#39;</td>
+<td class="MethodOfCaller">buildNativeEntityManagerFactory</td>
+<td class="FileOfCaller">AbstractEntityManagerFactoryBean.java</td>
+<td class="LineOfCaller">415</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-09-17 21:18:44,843</td>
+<td class="Message">Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;casClientController&#39;: Unsatisfied dependency expressed through field &#39;sysUserService&#39;; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;sysUserServiceImpl&#39;: Unsatisfied dependency expressed through field &#39;baseMapper&#39;; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;sysUserMapper&#39; defined in file [F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes\org\jeecg\modules\system\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property &#39;sqlSessionFactory&#39;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &#39;sqlSessionFactory&#39; defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method &#39;sqlSessionFactory&#39; threw exception; nested exception is java.lang.NoClassDefFoundError: org/mybatis/logging/LoggerFactory</td>
+<td class="MethodOfCaller">__refresh</td>
+<td class="FileOfCaller">AbstractApplicationContext.java</td>
+<td class="LineOfCaller">557</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:44,844</td>
+<td class="Message">Closing JPA EntityManagerFactory for persistence unit &#39;default&#39;</td>
+<td class="MethodOfCaller">destroy</td>
+<td class="FileOfCaller">AbstractEntityManagerFactoryBean.java</td>
+<td class="LineOfCaller">597</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:44,849</td>
+<td class="Message">closing dynamicDatasource  ing....</td>
+<td class="MethodOfCaller">destroy</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">182</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:44,921</td>
+<td class="Message">{dataSource-1} closing ...</td>
+<td class="MethodOfCaller">close</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">1948</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:44,927</td>
+<td class="Message">{dataSource-1} closed</td>
+<td class="MethodOfCaller">close</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">2020</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:44,968</td>
+<td class="Message">Stopping service [Tomcat]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:18:44,992</td>
+<td class="Message">
+
+Error starting ApplicationContext. To display the conditions report re-run your application with &#39;debug&#39; enabled.</td>
+<td class="MethodOfCaller">logMessage</td>
+<td class="FileOfCaller">ConditionEvaluationReportLoggingListener.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="error odd">
+<td class="Level">ERROR</td>
+<td class="Date">2020-09-17 21:18:45,011</td>
+<td class="Message">Application run failed</td>
+<td class="MethodOfCaller">reportFailure</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">858</td>
+</tr>
+<tr><td class="Exception" colspan="6">org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;casClientController&#39;: Unsatisfied dependency expressed through field &#39;sysUserService&#39;; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;sysUserServiceImpl&#39;: Unsatisfied dependency expressed through field &#39;baseMapper&#39;; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;sysUserMapper&#39; defined in file [F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes\org\jeecg\modules\system\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property &#39;sqlSessionFactory&#39;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &#39;sqlSessionFactory&#39; defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method &#39;sqlSessionFactory&#39; threw exception; nested exception is java.lang.NoClassDefFoundError: org/mybatis/logging/LoggerFactory
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:549)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.jeecg.JeecgApplication.main(JeecgApplication.java:32)
+<br />Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;sysUserServiceImpl&#39;: Unsatisfied dependency expressed through field &#39;baseMapper&#39;; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;sysUserMapper&#39; defined in file [F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes\org\jeecg\modules\system\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property &#39;sqlSessionFactory&#39;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &#39;sqlSessionFactory&#39; defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method &#39;sqlSessionFactory&#39; threw exception; nested exception is java.lang.NoClassDefFoundError: org/mybatis/logging/LoggerFactory
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 21 common frames omitted
+<br />Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;sysUserMapper&#39; defined in file [F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes\org\jeecg\modules\system\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property &#39;sqlSessionFactory&#39;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &#39;sqlSessionFactory&#39; defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method &#39;sqlSessionFactory&#39; threw exception; nested exception is java.lang.NoClassDefFoundError: org/mybatis/logging/LoggerFactory
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1499)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1379)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 34 common frames omitted
+<br />Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &#39;sqlSessionFactory&#39; defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method &#39;sqlSessionFactory&#39; threw exception; nested exception is java.lang.NoClassDefFoundError: org/mybatis/logging/LoggerFactory
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1484)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 45 common frames omitted
+<br />Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method &#39;sqlSessionFactory&#39; threw exception; nested exception is java.lang.NoClassDefFoundError: org/mybatis/logging/LoggerFactory
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 58 common frames omitted
+<br />Caused by: java.lang.NoClassDefFoundError: org/mybatis/logging/LoggerFactory
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.&lt;clinit&gt;(MybatisSqlSessionFactoryBean.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:160)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$8ca50f4b.CGLIB$sqlSessionFactory$1(&lt;generated&gt;)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$8ca50f4b$$FastClassBySpringCGLIB$$302d0f87.invoke(&lt;generated&gt;)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$8ca50f4b.sqlSessionFactory(&lt;generated&gt;)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Method.java:498)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 59 common frames omitted
+<br />Caused by: java.lang.ClassNotFoundException: org.mybatis.logging.LoggerFactory
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 71 common frames omitted
+</td></tr><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Sep 17 21:19:25 CST 2020</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:25,337</td>
+<td class="Message">Starting JeecgApplication on DESKTOP-KLOVOBK with PID 10852 (F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes started by dky in F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">50</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:25,342</td>
+<td class="Message">The following profiles are active: prod</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:28,131</td>
+<td class="Message">Multiple Spring Data modules found, entering strict repository configuration mode!</td>
+<td class="MethodOfCaller">multipleStoresDetected</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">244</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:28,135</td>
+<td class="Message">Bootstrapping Spring Data repositories in DEFAULT mode.</td>
+<td class="MethodOfCaller">registerRepositoriesIn</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">126</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:28,495</td>
+<td class="Message">Finished Spring Data repository scanning in 328ms. Found 0 repository interfaces.</td>
+<td class="MethodOfCaller">registerRepositoriesIn</td>
+<td class="FileOfCaller">RepositoryConfigurationDelegate.java</td>
+<td class="LineOfCaller">182</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:29,742</td>
+<td class="Message">Bean &#39;shiroConfig&#39; of type [org.jeecg.config.ShiroConfig$$EnhancerBySpringCGLIB$$f44f5a01] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:29,910</td>
+<td class="Message">Bean &#39;shiroRealm&#39; of type [org.jeecg.modules.shiro.authc.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:29,931</td>
+<td class="Message">===============(1)创建缓存管理器RedisCacheManager</td>
+<td class="MethodOfCaller">redisCacheManager</td>
+<td class="FileOfCaller">ShiroConfig.java</td>
+<td class="LineOfCaller">215</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:29,934</td>
+<td class="Message">===============(2)创建RedisManager,连接Redis..URL= 106.14.96.252:6379</td>
+<td class="MethodOfCaller">redisManager</td>
+<td class="FileOfCaller">ShiroConfig.java</td>
+<td class="LineOfCaller">233</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:29,940</td>
+<td class="Message">Bean &#39;redisManager&#39; of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:29,946</td>
+<td class="Message">Bean &#39;securityManager&#39; of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:29,993</td>
+<td class="Message">Bean &#39;authorizationAttributeSourceAdvisor&#39; of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,105</td>
+<td class="Message">Bean &#39;org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration&#39; of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d449f06b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,342</td>
+<td class="Message">Bean &#39;spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties&#39; of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,356</td>
+<td class="Message">Bean &#39;com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration&#39; of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$3dd8613c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,376</td>
+<td class="Message">Bean &#39;dsProcessor&#39; of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,386</td>
+<td class="Message">Bean &#39;dynamicDatasourceAnnotationAdvisor&#39; of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,422</td>
+<td class="Message">Bean &#39;spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties&#39; of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,438</td>
+<td class="Message">Bean &#39;org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration&#39; of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$e963aeb5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,588</td>
+<td class="Message">Bean &#39;lettuceClientResources&#39; of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,804</td>
+<td class="Message">Bean &#39;redisConnectionFactory&#39; of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,840</td>
+<td class="Message">Bean &#39;redisConfig&#39; of type [org.jeecg.config.RedisConfig$$EnhancerBySpringCGLIB$$3f1de14b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,929</td>
+<td class="Message">Bean &#39;org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration&#39; of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$e762ce1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:30,942</td>
+<td class="Message">Bean &#39;eventBus&#39; of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)</td>
+<td class="MethodOfCaller">postProcessAfterInitialization</td>
+<td class="FileOfCaller">PostProcessorRegistrationDelegate.java</td>
+<td class="LineOfCaller">330</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:31,699</td>
+<td class="Message">Tomcat initialized with port(s): 8080 (http)</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">TomcatWebServer.java</td>
+<td class="LineOfCaller">90</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:31,724</td>
+<td class="Message">Initializing ProtocolHandler [&quot;http-nio-8080&quot;]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:31,734</td>
+<td class="Message">Starting service [Tomcat]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:31,735</td>
+<td class="Message">Starting Servlet engine: [Apache Tomcat/9.0.16]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:31,743</td>
+<td class="Message">The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [E:\soft\java\jdk-8u144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;E:\soft\java\jdk-8u144\bin;E:\TortoiseProc\bin;E:\nodejs;E:\nodejs\node_global;C:\Program Files\Git\cmd;C:\Users\dky\AppData\Local\Microsoft\WindowsApps;;.]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:32,090</td>
+<td class="Message">Initializing Spring embedded WebApplicationContext</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:32,091</td>
+<td class="Message">Root WebApplicationContext: initialization completed in 6645 ms</td>
+<td class="MethodOfCaller">prepareWebApplicationContext</td>
+<td class="FileOfCaller">ServletWebServerApplicationContext.java</td>
+<td class="LineOfCaller">296</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:33,053</td>
+<td class="Message">动态数据源-检测到druid存在,如配置中未指定type,druid会默认配置</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">DynamicDataSourceCreator.java</td>
+<td class="LineOfCaller">113</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:35,212</td>
+<td class="Message">{dataSource-1,master} inited</td>
+<td class="MethodOfCaller">init</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">1003</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:35,213</td>
+<td class="Message">初始共加载 1 个数据源</td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">203</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:35,214</td>
+<td class="Message">动态数据源-加载 master 成功</td>
+<td class="MethodOfCaller">addDataSource</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:35,214</td>
+<td class="Message">当前的默认数据源是单数据源，数据源名为 master</td>
+<td class="MethodOfCaller">afterPropertiesSet</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">212</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:36,233</td>
+<td class="Message">HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]</td>
+<td class="MethodOfCaller">logPersistenceUnitInformation</td>
+<td class="FileOfCaller">LogHelper.java</td>
+<td class="LineOfCaller">31</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:36,330</td>
+<td class="Message">HHH000412: Hibernate Core {5.3.7.Final}</td>
+<td class="MethodOfCaller">logVersion</td>
+<td class="FileOfCaller">Version.java</td>
+<td class="LineOfCaller">46</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:36,332</td>
+<td class="Message">HHH000206: hibernate.properties not found</td>
+<td class="MethodOfCaller">&lt;clinit&gt;</td>
+<td class="FileOfCaller">Environment.java</td>
+<td class="LineOfCaller">213</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:36,634</td>
+<td class="Message">HCANN000001: Hibernate Commons Annotations {5.0.4.Final}</td>
+<td class="MethodOfCaller">&lt;clinit&gt;</td>
+<td class="FileOfCaller">JavaReflectionManager.java</td>
+<td class="LineOfCaller">49</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:37,203</td>
+<td class="Message">HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">Dialect.java</td>
+<td class="LineOfCaller">157</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:37,533</td>
+<td class="Message">Initialized JPA EntityManagerFactory for persistence unit &#39;default&#39;</td>
+<td class="MethodOfCaller">buildNativeEntityManagerFactory</td>
+<td class="FileOfCaller">AbstractEntityManagerFactoryBean.java</td>
+<td class="LineOfCaller">415</td>
+</tr>
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2020-09-17 21:19:38,510</td>
+<td class="Message">Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;casClientController&#39;: Unsatisfied dependency expressed through field &#39;sysUserService&#39;; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;sysUserServiceImpl&#39;: Unsatisfied dependency expressed through field &#39;baseMapper&#39;; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name &#39;sysUserMapper&#39; defined in file [F:\miniProgram\code\retrieve_garbage\huishou-server\project\jeecg-boot\jeecg-boot-module-system\target\classes\org\jeecg\modules\system\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property &#39;sqlSessionFactory&#39;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &#39;sqlSessionFactory&#39; defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method &#39;sqlSessionFactory&#39; threw exception; nested exception is java.lang.NoSuchMethodError: org.apache.ibatis.session.Configuration.getLanguageDriver(Ljava/lang/Class;)Lorg/apache/ibatis/scripting/LanguageDriver;</td>
+<td class="MethodOfCaller">__refresh</td>
+<td class="FileOfCaller">AbstractApplicationContext.java</td>
+<td class="LineOfCaller">557</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:38,512</td>
+<td class="Message">Closing JPA EntityManagerFactory for persistence unit &#39;default&#39;</td>
+<td class="MethodOfCaller">destroy</td>
+<td class="FileOfCaller">AbstractEntityManagerFactoryBean.java</td>
+<td class="LineOfCaller">597</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:38,516</td>
+<td class="Message">closing dynamicDatasource  ing....</td>
+<td class="MethodOfCaller">destroy</td>
+<td class="FileOfCaller">DynamicRoutingDataSource.java</td>
+<td class="LineOfCaller">182</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:38,526</td>
+<td class="Message">{dataSource-1} closing ...</td>
+<td class="MethodOfCaller">close</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">1948</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:38,533</td>
+<td class="Message">{dataSource-1} closed</td>
+<td class="MethodOfCaller">close</td>
+<td class="FileOfCaller">DruidDataSource.java</td>
+<td class="LineOfCaller">2020</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:38,572</td>
+<td class="Message">Stopping service [Tomcat]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2020-09-17 21:19:38,599</td>
+<td class="Message">
+
+Error starting ApplicationContext. To display the conditions report re-run your application with &#39;debug&#39; enabled.</td>
+<td class="MethodOfCaller">logMessage</td>
+<td class="FileOfCaller">ConditionEvaluationReportLoggingListener.java</td>
+<td class="LineOfCaller">142</td>
+</tr>
+
+<tr class="error odd">
+<td class="Level">ERROR</td>
+<td class="Date">2020-09-17 21:19:38,610</td>
+<td class="Message">
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method org.apache.ibatis.session.Configuration.getLanguageDriver(Ljava/lang/Class;)Lorg/apache/ibatis/scripting/LanguageDriver; but it does not exist. Its class, org.apache.ibatis.session.Configuration, is available from the following locations:
+
+    jar:file:/F:/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/session/Configuration.class
+
+It was loaded from the following location:
+
+    file:/F:/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.ibatis.session.Configuration
+</td>
+<td class="MethodOfCaller">report</td>
+<td class="FileOfCaller">LoggingFailureAnalysisReporter.java</td>
+<td class="LineOfCaller">42</td>
+</tr>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.recycle.mapper.RecycleAddressMapper">
+
+    <select id="listWithPage" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+
+    </select>
+
+    <select id="count" parameterType="java.lang.String" resultType="com.alibaba.fastjson.JSONObject">
+
+    </select>
+
+    <update id="resetDefault" parameterType="java.lang.String">
+        update recycle_address
+        set is_default=0
+        where user_id = #{userId}
+    </update>
+    <select id="getDefault" parameterType="java.lang.String" resultType="org.jeecg.modules.recycle.entity.RecycleAddress">
+        select id,user_id as userId,
+            service_address as serviceAddress,
+            detailed_address as detailedAddress,
+            linkman,
+            phone,
+            create_by as createBy,
+            create_time as createTime,
+             is_default as isDefault
+        from recycle_address where user_id = #{userId} and is_default = 1
+    </select>
+</mapper>

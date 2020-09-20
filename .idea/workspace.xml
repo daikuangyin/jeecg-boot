@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f6670e0e-92aa-405a-8d38-0337a68252e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/project/jeecg-boot/jeecg-boot-module-system/src/main/java/org/jeecg/JeecgApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/jeecg-boot/jeecg-boot-module-system/src/main/java/org/jeecg/JeecgApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/jeecg-boot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/jeecg-boot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/logs/error-log.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/logs/error-log.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hdif3M6vUdcPjc9W4irk8ZX2Zz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/jeecg-boot" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6670e0e-92aa-405a-8d38-0337a68252e5" name="Default Changelist" comment="" />
+      <created>1600347469753</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600347469753</updated>
+      <workItem from="1600347471087" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1600347487903">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1600347487903" />
+  </component>
+</project>
